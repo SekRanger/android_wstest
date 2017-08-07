@@ -6,10 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.koushikdutta.async.ByteBufferList;
-import com.koushikdutta.async.DataEmitter;
-import com.koushikdutta.async.callback.CompletedCallback;
-import com.koushikdutta.async.callback.DataCallback;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.koushikdutta.async.http.AsyncHttpClient;
 import com.koushikdutta.async.http.WebSocket;
 
@@ -27,6 +24,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String token = FirebaseInstanceId.getInstance().getToken();
+        System.out.println(token);
     }
 
     private void onConnected(WebSocket webSocket) {
@@ -56,7 +55,7 @@ public class MainActivity extends Activity {
         super.onResume();
         final TextView textView = (TextView) findViewById(R.id.textView);
 
-        if (this.ws == null || !this.ws.isOpen()) {
+        if (false && (this.ws == null || !this.ws.isOpen())) {
             Date now = new Date();
             System.out.println(now.getTime());
             AsyncHttpClient.getDefaultInstance().websocket("ws://192.168.1.20:8000/socketcluster/", "", new AsyncHttpClient.WebSocketConnectCallback() {

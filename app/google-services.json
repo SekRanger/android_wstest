@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "266461163136",
+    "firebase_url": "https://gcm-testing-for-wf-2016.firebaseio.com",
+    "project_id": "gcm-testing-for-wf-2016",
+    "storage_bucket": "gcm-testing-for-wf-2016.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266461163136:android:9c001d8f77f7d1e1",
+        "android_client_info": {
+          "package_name": "ws.wuah.websockettest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266461163136-m694l8hf02qphfcc3ee63aafvlfshmbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-pGDajhcHKSbStTOs-z2gC2N8GNKSszc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
